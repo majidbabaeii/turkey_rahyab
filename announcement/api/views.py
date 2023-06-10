@@ -1,3 +1,4 @@
+from django.utils.translation import gettext as _
 from rest_framework import filters, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import (
@@ -41,7 +42,7 @@ class AnnouncementViewSet(viewsets.ModelViewSet):
         instance = self.get_object()
         if not request.user.is_superuser:
             return Response(
-                {"detail": "You do not have permission to perform this action."},
+                {"detail": _("You do not have permission to perform this action.")},
                 status=status.HTTP_403_FORBIDDEN,
             )
         instance.approved = True
