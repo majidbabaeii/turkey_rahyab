@@ -75,7 +75,7 @@ class LogoutAPIView(APIViewWithContext):
             token.delete()
 
         # Provide a response
-        return Response({"success": "User logged out"})
+        return Response({"success": _("User logged out")})
 
 
 class ProfileAPIView(APIViewWithContext):
