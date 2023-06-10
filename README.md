@@ -7,7 +7,7 @@
     2. run `pip install pipenv`
     3. run `pipenv install -d`
     4. run `python manage.py migrate`
-    5. run `python manage.py runserver
+    5. run `python manage.py runserver`
 
 * ## Note
 
